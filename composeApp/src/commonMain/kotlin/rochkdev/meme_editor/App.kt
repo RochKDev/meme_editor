@@ -18,32 +18,17 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 
 import memeeditor.composeapp.generated.resources.Res
 import memeeditor.composeapp.generated.resources.compose_multiplatform
+import rochkdev.meme_editor.core.theme.MemeCreatorTheme
+import rochkdev.meme_editor.meme_gallery.presentation.MemeGalleryScreen
 
 @Composable
 @Preview
 fun App() {
-    MaterialTheme {
-        var showContent by remember { mutableStateOf(false) }
-        Column(
-            modifier = Modifier
-                .background(MaterialTheme.colorScheme.primaryContainer)
-                .safeContentPadding()
-                .fillMaxSize(),
-            horizontalAlignment = Alignment.CenterHorizontally,
-        ) {
-            Button(onClick = { showContent = !showContent }) {
-                Text("Click me!")
+    MemeCreatorTheme {
+        MemeGalleryScreen(
+            onMemeTemplateSelected = { memeTemplate ->
+                // Handle meme template selection
             }
-            AnimatedVisibility(showContent) {
-                val greeting = remember { Greeting().greet() }
-                Column(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalAlignment = Alignment.CenterHorizontally,
-                ) {
-                    Image(painterResource(Res.drawable.compose_multiplatform), null)
-                    Text("Compose: $greeting")
-                }
-            }
-        }
+        )
     }
 }
