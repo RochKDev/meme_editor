@@ -1,6 +1,6 @@
 [versions]
 # Build Config
-agp = "8.13.0"
+agp = "8.13.2"
 android-compileSdk = "36"
 android-minSdk = "24"
 android-targetSdk = "36"

@@ -18,6 +18,7 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 
 import memeeditor.composeapp.generated.resources.Res
 import memeeditor.composeapp.generated.resources.compose_multiplatform
+import rochkdev.meme_editor.core.presentation.NavigationRoot
 import rochkdev.meme_editor.core.theme.MemeCreatorTheme
 import rochkdev.meme_editor.meme_gallery.presentation.MemeGalleryScreen
 
@@ -25,10 +26,6 @@ import rochkdev.meme_editor.meme_gallery.presentation.MemeGalleryScreen
 @Preview
 fun App() {
     MemeCreatorTheme {
-        MemeGalleryScreen(
-            onMemeTemplateSelected = { memeTemplate ->
-                // Handle meme template selection
-            }
-        )
+        NavigationRoot()
     }
 }
