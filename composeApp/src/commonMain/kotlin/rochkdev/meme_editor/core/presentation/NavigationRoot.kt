@@ -29,8 +29,8 @@ fun NavigationRoot() {
         }
         composable<Route.MemeEditor> {
             val templateId = it.toRoute<Route.MemeEditor>().templateId
-            val template = remember(templateId){
-                memeTemplates.first{
+            val template = remember(templateId) {
+                memeTemplates.first {
                     it.id == templateId
                 }
             }

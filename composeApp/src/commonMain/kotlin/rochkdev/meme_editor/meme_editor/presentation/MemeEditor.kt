@@ -44,5 +44,6 @@ fun MemeEditorScreen(
             modifier = Modifier.fillMaxWidth(),
             contentScale = ContentScale.FillWidth
         )
+
     }
 }
